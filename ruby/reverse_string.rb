@@ -1,17 +1,30 @@
 def reverse_string(str)
-  # type your code in here
+  # create array to hold our characters in
+  characters = []
+  # iterate over each character
+  str.chars.each do |char|
+    #take the character and push it to the start of the array
+    characters.unshift(char)
+  end
+  # put all of the letters together and return it
+  characters.join
 end
 
 if __FILE__ == $PROGRAM_NAME
   puts "Expecting: 'ih'"
   puts "=>", reverse_string('hi')
 
-  puts
-
   puts "Expecting: 'ybabtac'"
   puts "=>", reverse_string('catbaby')
 
-  # Don't forget to add your own!
+  puts "Expecting: 'ulkeT'"
+  puts "=>", reverse_string('Teklu')
+
+  puts "Expecting: 'a'"
+  puts "=>", reverse_string('a')
+
+  puts "Expecting: 'ElpItLuM'"
+  puts "=>", reverse_string('MuLtIplE')
 end
 
 # Please add your pseudocode to this file
